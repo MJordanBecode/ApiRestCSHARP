@@ -30,3 +30,4 @@
 /home/jordan/Becode/Wozniak/Wozniak-C#/ApiRestCSHARP/obj/Debug/net9.0/ApiRestCSHARP.pdb
 /home/jordan/Becode/Wozniak/Wozniak-C#/ApiRestCSHARP/obj/Debug/net9.0/ApiRestCSHARP.genruntimeconfig.cache
 /home/jordan/Becode/Wozniak/Wozniak-C#/ApiRestCSHARP/obj/Debug/net9.0/ref/ApiRestCSHARP.dll
+/home/jordan/Becode/Wozniak/Wozniak-C#/ApiRestCSHARP/obj/Debug/net9.0/ApiRestCSHARP.sourcelink.json
