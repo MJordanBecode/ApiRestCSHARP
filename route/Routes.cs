@@ -111,7 +111,21 @@ app.MapDelete("/tickets/{id}", (Guid id) =>
 
  
 
-//app.MapPut("/tickets/{id}", (int id, Ticket ticket) => tickets.FirstOrDefault(t => t.Id == id) = ticket);
+app.MapPut("/tickets/{id}", (Guid id, Ticket updatedTicket) =>
+{
+    var ticket = tickets.FirstOrDefault(t => t.Id == id);
+    if (ticket is null)
+    {
+        return Results.NotFound($"Le ticket avec l'id {id} n'existe pas.");
+    }
+
+    // Mettre à jour les propriétés
+    ticket.Status = updatedTicket.Status;
+    ticket.Description = updatedTicket.Description;
+
+    return Results.Ok(ticket);
+});
+
 
 app.MapGet("users/{id}/tickets", (int id) => tickets.Where(t => t.UserId == id) );
 app.MapDelete("users/{id}/tickets", (int id) => tickets.RemoveAll(t => t.UserId == id));
